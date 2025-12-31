@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>TravelWorld - Головна</title>
+        <link rel="icon" href="favicon.ico" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+            rel="stylesheet"
+        />
+        <link href="style/bootstrap.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="fonts/font-awesome/css/all.css" />
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    <i class="fas fa-globe-americas me-2"></i>TravelWorld
+                </a>
+                <button
+                    class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="fas fa-home me-1"></i>Головна
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">
+                                <i class="fas fa-images me-1"></i>Галерея
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stories.html">
+                                <i class="fas fa-book-open me-1"></i>Історії
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">
+                                <i class="fas fa-newspaper me-1"></i>Статті
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="fas fa-envelope me-1"></i>Контакти
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="author.html">
+                                <i class="fas fa-user me-1"></i>Автор
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="py-5 text-center bg-light">
+            <h1 class="fw-bold">
+                <i class="fas fa-plane-departure me-2"></i>Ласкаво просимо у
+                світ подорожей
+            </h1>
+            <p class="lead">
+                Натхнення, пригоди та корисні поради мандрівникам
+            </p>
+            <button class="btn btn-primary" onclick="openSlider()">
+                <i class="fas fa-play-circle me-2"></i>Переглянути галерею
+            </button>
+        </header>
+        <div id="sliderModal">
+            <div class="slider-container">
+                <span class="slider-close" onclick="closeSlider()"
+                    >&times;</span
+                >
+                <div class="slider-content">
+                    <img
+                        id="sliderImage"
+                        src="img/photo1.JPG"
+                        alt="Slide"
+                        class="slider-image"
+                    />
+                    <div class="slider-text">
+                        <h2 id="sliderTitle">Мальовничі краєвиди</h2>
+                        <p id="sliderDesc">
+                            Відкрийте для себе найкрасивіші місця світу
+                        </p>
+                    </div>
+                    <div class="slider-nav slider-prev" onclick="prevSlide()">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="slider-nav slider-next" onclick="nextSlide()">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span
+                        class="slider-dot active"
+                        onclick="goToSlide(0)"
+                    ></span>
+                    <span class="slider-dot" onclick="goToSlide(1)"></span>
+                    <span class="slider-dot" onclick="goToSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+        <div class="container py-4">
+            <div class="row g-4 text-center">
+                <div class="col-12 col-md-4">
+                    <h4><i class="fas fa-cloud-sun me-2"></i>Погода</h4>
+                    <div class="widget">
+                        <iframe
+                            src="https://api.wo-cloud.com/content/widget/?geoObjectKey=14438166&language=uk&region=UA&timeFormat=HH:mm&windUnit=mps&systemOfMeasurement=metric&temperatureUnit=celsius"
+                            name="CW2"
+                            scrolling="no"
+                            style="
+                                width: 100%;
+                                max-width: 420px;
+                                height: 420px;
+                                border: 1px solid #10658e;
+                                border-radius: 8px;
+                            "
+                            frameborder="0"
+                        ></iframe>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4><i class="fab fa-facebook me-2"></i>Facebook</h4>
+                    <div class="widget">
+                        <iframe
+                            src="https://www.facebook.com/plugins/video.php?height=420&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2069055903908547%2F&show_text=false&width=420&t=0"
+                            style="
+                                width: 100%;
+                                max-width: 420px;
+                                height: 420px;
+                                border: none;
+                                overflow: hidden;
+                            "
+                            scrolling="no"
+                            frameborder="0"
+                            allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                        ></iframe>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h4><i class="fas fa-coins me-2"></i>Курс валют</h4>
+                    <div class="widget w-100">
+                        <fxwidget-ccp
+                            amount="100"
+                            decimals="2"
+                            large="false"
+                            shadow="true"
+                            symbol="true"
+                            grouping="true"
+                            border="true"
+                            main-curr="USD"
+                            sel-curr="BTC,EUR,GBP,AUD,CNY,JPY"
+                            background-color="#1A2980"
+                            background="linear-gradient(185deg,#1A2980,#26D0CE)"
+                        ></fxwidget-ccp>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-dark text-white text-center p-3 mt-auto">
+            <i class="far fa-copyright me-1"></i>2026 TravelWorld |
+            <a href="author.html" class="text-blue text-decoration-none">
+                Михайлюк Ангеліна ПП-21з
+            </a>
+        </footer>
+        <script src="script/bootstrap.bundle.js"></script>
+        <script src="script/script.js"></script>
+        <script
+            async
+            src="https://s.fx-w.io/widgets/currency-converter-pro/latest.js"
+        ></script>
+    </body>
+</html>

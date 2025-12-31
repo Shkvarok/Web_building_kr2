@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>TravelWorld - Контакти</title>
+        <link rel="icon" href="favicon.ico" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+            rel="stylesheet"
+        />
+        <link href="style/bootstrap.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="stylesheet" href="fonts/font-awesome/css/all.css" />
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="index.html">
+                    <i class="fas fa-globe-americas me-2"></i>TravelWorld
+                </a>
+                <button
+                    class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="fas fa-home me-1"></i>Головна
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">
+                                <i class="fas fa-images me-1"></i>Галерея
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="stories.html">
+                                <i class="fas fa-book-open me-1"></i>Історії
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">
+                                <i class="fas fa-newspaper me-1"></i>Статті
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="fas fa-envelope me-1"></i>Контакти
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="author.html">
+                                <i class="fas fa-user me-1"></i>Автор
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header class="py-5 text-center bg-light">
+            <h1 class="fw-bold">
+                <i class="fas fa-address-book me-2"></i>Контакти
+            </h1>
+            <p class="lead">
+                <i class="fas fa-paper-plane me-2"></i>Тут можна залишити свої
+                контакти та повідомлення автору!
+            </p>
+        </header>
+        <div class="container py-4 text-center">
+            <form class="mx-auto col-md-6" onsubmit="sendEmail(event)">
+                <div class="input-group mb-2">
+                    <span class="input-group-text"
+                        ><i class="fas fa-user"></i
+                    ></span>
+                    <input
+                        class="form-control"
+                        placeholder="Введіть Ваше ім'я"
+                        required
+                    />
+                </div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text"
+                        ><i class="fas fa-phone"></i
+                    ></span>
+                    <input
+                        class="form-control"
+                        type="tel"
+                        pattern="\+380\d{9}"
+                        placeholder="+380XXXXXXXXX"
+                        title="Введіть номер телефону (наприклад: +380501234567)"
+                        required
+                    />
+                </div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text"
+                        ><i class="fas fa-at"></i
+                    ></span>
+                    <input
+                        class="form-control"
+                        type="email"
+                        placeholder="email@example.com"
+                        required
+                    />
+                </div>
+                <div class="input-group mb-2">
+                    <span class="input-group-text"
+                        ><i class="fas fa-comment"></i
+                    ></span>
+                    <textarea
+                        class="form-control"
+                        placeholder="Напишіть повідомлення тут..."
+                        required
+                    ></textarea>
+                </div>
+                <button class="btn btn-primary mt-3 w-100">
+                    <i class="fas fa-paper-plane me-2"></i>Надіслати
+                </button>
+            </form>
+            <h2 class="mt-5">
+                <i class="fas fa-map-marker-alt me-2"></i>Google Map
+            </h2>
+            <iframe
+                id="map"
+                src="https://www.google.com/maps/embed?pb=!4v1766846863747!6m8!1m7!1szhZt5SlOAPPrDOXoT_V7Qw!2m2!1d49.83469677931793!2d24.01447424719382!3f357.3922052990147!4f7.1002533598817195!5f0.4000000000000002"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+        </div>
+        <script
+            async
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=initMap"
+        ></script>
+        <footer class="bg-dark text-white text-center p-3 mt-auto">
+            <i class="far fa-copyright me-1"></i>2026 TravelWorld |
+            <a href="author.html" class="text-blue text-decoration-none">
+                Михайлюк Ангеліна ПП-21з
+            </a>
+        </footer>
+        <script src="script/bootstrap.bundle.js"></script>
+        <script src="script/script.js"></script>
+    </body>
+</html>
